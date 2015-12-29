@@ -1,5 +1,5 @@
 /*!
- * Bootstrap-select v1.7.3 (http://silviomoreto.github.io/bootstrap-select)
+ * Bootstrap-select v1.9.3 (http://silviomoreto.github.io/bootstrap-select)
  *
  * Copyright 2013-2015 bootstrap-select
  * Licensed under MIT (https://github.com/silviomoreto/bootstrap-select/blob/master/LICENSE)
@@ -19,23 +19,23 @@
   } else {
     factory(jQuery);
   }
-}(this, function () {
+}(this, function (jQuery) {
 
 (function ($) {
   $.fn.selectpicker.defaults = {
-    noneSelectedText: 'Nič izbranega',
-    noneResultsText: 'Ni zadetkov za {0}',
+    noneSelectedText: 'Ei valintoja',
+    noneResultsText: 'Ei hakutuloksia {0}',
     countSelectedText: function (numSelected, numTotal) {
-      "Število izbranih: {0}";
+      return (numSelected == 1) ? "{0} valittu" : "{0} valitut";
     },
     maxOptionsText: function (numAll, numGroup) {
       return [
-        'Omejitev dosežena (max. izbranih: {n})',
-        'Omejitev skupine dosežena (max. izbranih: {n})'
+        (numAll == 1) ? 'Valintojen maksimimäärä ({n} saavutettu)' : 'Valintojen maksimimäärä ({n} saavutettu)',
+        (numGroup == 1) ? 'Ryhmän maksimimäärä ({n} saavutettu)' : 'Ryhmän maksimimäärä ({n} saavutettu)'
       ];
     },
-    selectAllText: 'Izberi vse',
-    deselectAllText: 'Počisti izbor',
+    selectAllText: 'Valitse kaikki',
+    deselectAllText: 'Poista kaikki',
     multipleSeparator: ', '
   };
 })(jQuery);

@@ -2,7 +2,19 @@
 
 Assets for https://github.com/silviomoreto/bootstrap-select - see it for details
 
-add to application.js and application.css something like
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'bootstrap-select-rails', git: 'https://github.com/maxigs/bootstrap-select-rails.git'
+
+Then execute:
+
+    $ bundle
+
+## Usage
+
+Add to application.js and application.css something like
 
     //= require bootstrap-select
 
@@ -12,24 +24,6 @@ For example, if using
 
     //= require bootstrap/alert
     //= require bootstrap/dropdown
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'bootstrap-select-rails'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install bootstrap-select-rails
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
